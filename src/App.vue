@@ -8,7 +8,7 @@
         <template #prepend>
           <v-list-item
             lines="two"
-            prepend-avatar="@/Imgs/logoB.png"
+            prepend-avatar="@/assets/logoB.png"
             title="ByteStorm Solutions"
           ></v-list-item>
         </template>
@@ -22,11 +22,60 @@
           <v-list-item prepend-icon="mdi-alpha-m-circle" title="Mision" value="mision" ></v-list-item>
         </v-list>
       </v-navigation-drawer>
-      <v-main style="height: 250px">
-        <RouterView />
+      
+      <v-main style="height: 200px">
+        <!-- <h1>Home</h1>
+        <RouterView /> -->
       </v-main>
     </v-layout>
   </v-card>
+
+  <div class="mt-4" >
+
+    <v-card width="400" color="indigo-darken-3">
+      <v-card-item>
+        <v-card-title>This is a title</v-card-title>
+
+        <v-card-subtitle>This is a subtitle</v-card-subtitle>
+      </v-card-item>
+
+      <v-card-text>
+        This is content
+      </v-card-text>
+    </v-card>
+  </div>
+
+  <div class="mt-4">
+
+      <v-card width="400" color="indigo-darken-3">
+        <v-card-item>
+          <v-card-title>This is a title</v-card-title>
+
+          <v-card-subtitle>This is a subtitle</v-card-subtitle>
+        </v-card-item>
+
+        <v-card-text>
+          This is content
+        </v-card-text>
+      </v-card>
+  </div>
+
+  <div class="mt-4">
+
+      <v-card width="400" color="indigo-darken-3">
+        <v-card-item>
+          <v-card-title>This is a title</v-card-title>
+
+          <v-card-subtitle>This is a subtitle</v-card-subtitle>
+        </v-card-item>
+
+        <v-card-text>
+          This is content
+        </v-card-text>
+      </v-card>
+  </div>
+
+  
 </template>
 
 <script setup>
