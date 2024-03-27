@@ -17,15 +17,15 @@
 
         <v-list density="compact" nav>
           <v-list-item prepend-icon="mdi-home-outline" title="Home" value="home" to="/"></v-list-item>
-          <v-list-item prepend-icon="mdi-account-group" title="Team" value="team" ></v-list-item>
-          <v-list-item prepend-icon="mdi-checkbox-outline" title="Operativo" value="operativo" ></v-list-item>
-          <v-list-item prepend-icon="mdi-alpha-m-circle" title="Mision" value="mision" ></v-list-item>
+          <v-list-item prepend-icon="mdi-account-group" title="Team" value="team" to="/teams" ></v-list-item>
+          <v-list-item prepend-icon="mdi-checkbox-outline" title="Operativo" value="operativo" to="/operativo" ></v-list-item>
+          <v-list-item prepend-icon="mdi-alpha-m-circle" title="Mision" value="mision" to="/mision" ></v-list-item>
         </v-list>
       </v-navigation-drawer>
       
       <v-main style="height: 200px">
-        <!-- <h1>Home</h1>
-        <RouterView /> -->
+         <h1>Home</h1>
+        <RouterView></RouterView>
       </v-main>
     </v-layout>
   </v-card>
@@ -75,7 +75,6 @@
       </v-card>
   </div>
 
-  
 </template>
 
 <script setup>
