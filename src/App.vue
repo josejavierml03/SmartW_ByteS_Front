@@ -23,60 +23,23 @@
         </v-list>
       </v-navigation-drawer>
       
-      <v-main style="height: 200px">
-         <h1>Home</h1>
-        <RouterView></RouterView>
+      <v-main style="height: 90px">
+         <h1>ByteStorm Solutions</h1>
       </v-main>
     </v-layout>
   </v-card>
-
-  <div class="mt-4" >
-
-    <v-card width="400" color="indigo-darken-3">
-      <v-card-item>
-        <v-card-title>This is a title</v-card-title>
-
-        <v-card-subtitle>This is a subtitle</v-card-subtitle>
-      </v-card-item>
-
-      <v-card-text>
-        This is content
-      </v-card-text>
-    </v-card>
-  </div>
-
-  <div class="mt-4">
-
-      <v-card width="400" color="indigo-darken-3">
-        <v-card-item>
-          <v-card-title>This is a title</v-card-title>
-
-          <v-card-subtitle>This is a subtitle</v-card-subtitle>
-        </v-card-item>
-
-        <v-card-text>
-          This is content
-        </v-card-text>
-      </v-card>
-  </div>
-
-  <div class="mt-4">
-
-      <v-card width="400" color="indigo-darken-3">
-        <v-card-item>
-          <v-card-title>This is a title</v-card-title>
-
-          <v-card-subtitle>This is a subtitle</v-card-subtitle>
-        </v-card-item>
-
-        <v-card-text>
-          This is content
-        </v-card-text>
-      </v-card>
-  </div>
+  <RouterView></RouterView>
 
 </template>
 
 <script setup>
 
 </script>
+
+<style>
+h1{
+  padding-top: 25px;
+  padding-left: 15px;
+}
+
+</style>
