@@ -3,7 +3,7 @@
 
 <div class="d-flex align-center flex-column">
 <div class="mt-4" >
-<v-card width="600" color="indigo-darken-3">
+<v-card width="750" color="indigo-darken-3">
   <v-card-item>
     <v-card-title>RELAX</v-card-title>
 
@@ -21,7 +21,7 @@
 
 <div class="mt-4">
 
-  <v-card width="600" color="indigo-darken-3">
+  <v-card width="750" color="indigo-darken-3">
     <v-card-item>
       <v-card-title>CREATIVIDAD</v-card-title>
 
@@ -38,9 +38,9 @@
   </v-card>
 </div>
 
-<div class="mt-4">
+<div class="mt-4 mb-6">
 
-  <v-card width="600" color="indigo-darken-3">
+  <v-card width="750" color="indigo-darken-3">
     <v-card-item>
       <v-card-title>CODIGO</v-card-title>
 
@@ -55,7 +55,33 @@
   </v-card>
 </div>
 </div>
+<v-card
+    class="mx-auto mb-6"
+    elevation="20"
+    max-width="750"
+  >
+  <v-carousel>
+  <v-carousel-item
+    src="@/assets/code.jpg"
+    cover
+  ></v-carousel-item>
+
+  <v-carousel-item
+    src="@/assets/imagen2.png"
+    cover
+  ></v-carousel-item>
+
+  <v-carousel-item
+    src="@/assets/imagen3.png"
+    cover
+  ></v-carousel-item>
+
+  </v-carousel>
+</v-card>
 </template>
 
-<style>
-</style>
+<script setup>
+
+import { useCounterStore } from '@/stores/counter'
+
+</script>
