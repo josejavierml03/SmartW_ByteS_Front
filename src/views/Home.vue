@@ -80,8 +80,3 @@
 </v-card>
 </template>
 
-<script setup>
-
-import { useCounterStore } from '@/stores/counter'
-
-</script>
