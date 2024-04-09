@@ -3,7 +3,7 @@
 
 <div class="d-flex align-center flex-column">
 <div class="mt-4" >
-<v-card width="750" color="indigo-darken-3">
+<v-card max-width="750" color="indigo-darken-3">
   <v-card-item>
     <v-card-title>RELAX</v-card-title>
 
@@ -21,7 +21,7 @@
 
 <div class="mt-4">
 
-  <v-card width="750" color="indigo-darken-3">
+  <v-card max-width="750" color="indigo-darken-3">
     <v-card-item>
       <v-card-title>CREATIVIDAD</v-card-title>
 
@@ -40,7 +40,7 @@
 
 <div class="mt-4 mb-6">
 
-  <v-card width="750" color="indigo-darken-3">
+  <v-card max-width="750" color="indigo-darken-3">
     <v-card-item>
       <v-card-title>CODIGO</v-card-title>
 

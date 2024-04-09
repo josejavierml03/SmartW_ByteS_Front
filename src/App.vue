@@ -23,12 +23,13 @@
         </v-list>
       </v-navigation-drawer>
       
-      <v-main style="height: 90px">
+      <v-main>
          <h1>ByteStorm Solutions</h1>
+         <RouterView></RouterView>
       </v-main>
     </v-layout>
   </v-card>
-  <RouterView></RouterView>
+
 
 </template>
 
