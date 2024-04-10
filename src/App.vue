@@ -24,7 +24,9 @@
       </v-navigation-drawer>
       
       <v-main>
+        <div id="Titulo">
          <h1>ByteStorm Solutions</h1>
+        </div>
          <RouterView></RouterView>
       </v-main>
     </v-layout>
@@ -38,9 +40,14 @@
 </script>
 
 <style>
-h1{
-  padding-top: 25px;
-  padding-left: 15px;
+#Titulo{
+  background-color: rgb(26, 26, 26);
+  padding-top: 5px;
+  padding-bottom: 25px;
 }
 
+h1{
+  padding-top: 15px;
+  padding-left: 15px;
+}
 </style>
