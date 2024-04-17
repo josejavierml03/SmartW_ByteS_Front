@@ -3,14 +3,12 @@ import Home from '@/views/Home.vue'
 import Teams from '@/views/Teams.vue'
 import Mision from '@/views/Mision.vue'
 import Operativo from '@/views/Operativo.vue'
-import About from '@/views/About.vue'
 
 const routes= [
   {path: '/', name: 'Home', component: Home},
   {path: '/teams', name: 'Teams', component: Teams},
   {path: '/mision', name: 'Mision', component: Mision},
-  {path: '/operativo', name: 'Operativo', component: Operativo},
-  {path: '/about', name: 'About', component: About}
+  {path: '/operativo', name: 'Operativo', component: Operativo}
 ]
 
 const router = createRouter({
