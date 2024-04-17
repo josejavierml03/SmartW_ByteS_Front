@@ -20,9 +20,14 @@
           <v-list-item prepend-icon="mdi-account-group" title="Team" value="team" to="/teams" ></v-list-item>
           <v-list-item prepend-icon="mdi-checkbox-outline" title="Operativo" value="operativo" to="/operativo" ></v-list-item>
           <v-list-item prepend-icon="mdi-alpha-m-circle" title="Mision" value="mision" to="/mision" ></v-list-item>
-          <v-list-item prepend-icon="mdi-information-outline" title="About" value="about" to="/about" ></v-list-item>
-          
         </v-list>
+
+        <v-divider></v-divider>
+        <v-card-text>
+          {{ new Date().getFullYear() }} —
+          <strong>Copyright R®</strong>
+        </v-card-text>
+
       </v-navigation-drawer>
       
       <v-main>
@@ -31,6 +36,7 @@
         </div>
          <RouterView></RouterView>
       </v-main>
+      
     </v-layout>
   </v-card>
 
