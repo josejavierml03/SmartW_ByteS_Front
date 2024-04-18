@@ -1,11 +1,14 @@
 <template>
     <form @submit.prevent="">
-      <h1>Agregar Tarea</h1>
+      <h1>Agregar Equipo</h1>
       <div>
-        <input type="text" placeholder="Nombre" required>
+        <input type="text" placeholder="Tipo" required>
       </div>
       <div>
         <input type="text" placeholder="Descripción" required>
+      </div>
+      <div>
+        <input type="text" placeholder="Estado" required>
       </div>
       <div>
         <button type="submit">Guardar</button>
@@ -26,15 +29,15 @@
   
   <style scoped>
   form{
-      width: 350px;
+      max-width: 800px;
       margin:auto;
-      background: rgb(236, 231, 231);
       padding: 10px;
       margin-top: 10px;
       
     }
     h1{
       text-align: center;
+      color: white;
     }
     input{
       width: 98%;

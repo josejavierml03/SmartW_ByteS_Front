@@ -7,11 +7,13 @@
             <button @click="storeCounter.decreaseCount" id="btR">-</button>
             <button @click="storeCounter.increaseCount">+</button>
         </div>
+        <Form />
 </template>
 
 <script setup>
 
 import { useCounterStore } from '@/stores/counter'
+import Form from '@/components/Form.vue';
 
 const storeCounter = useCounterStore()
 
