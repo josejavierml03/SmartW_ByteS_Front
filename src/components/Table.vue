@@ -4,12 +4,14 @@
         <th>Tipo</th>
         <th>Descripcion</th>
         <th>Estado</th>
+        <th>Operativo</th>
       </thead>
       <tbody>
         <tr v-for="(item, index) in equipos" :key="index">
           <td>{{item.tipo}}</td>
           <td>{{item.descripcion}}</td>
           <td>{{item.estado}}</td>
+          <td>{{item.operativo}}</td>
         </tr>
       </tbody>
     </table>
@@ -17,7 +19,7 @@
   
   <script lang="ts">
   import { defineComponent } from 'vue'
-  import {mapState, mapActions} from 'pinia';
+  import {mapState, mapActions} from 'pinia'
   import {useEquipoStore} from '@/stores/equiposStore'
   
   export default defineComponent({
@@ -38,7 +40,7 @@
   
   <style>
   table{
-    width: 90%;
+    width: 80%;
     margin-top: 15px;
     margin-right: auto;
     margin-left: auto;

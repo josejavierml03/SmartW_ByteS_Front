@@ -6,7 +6,8 @@ interface IEquipo{
   _id?: string,
   tipo: string,
   descripcion: string,
-  estado: string
+  estado: string,
+  operativo: string
 }
 
 interface IState{
@@ -20,7 +21,8 @@ export const useEquipoStore = defineStore('equipoStore', {
       equipoCurrent:{
         tipo:'',
         descripcion:'',
-        estado:''
+        estado:'',
+        operativo:''
       },
       equipos: []
     }
@@ -28,14 +30,16 @@ export const useEquipoStore = defineStore('equipoStore', {
   actions:{
     async addEquipo(equipo:IEquipo){
       try {
-        const {tipo, descripcion, estado} = equipo;
+        const {tipo, descripcion, estado, operativo} = equipo;
         const data = await Axios({
           url:API,
+          headers: {"Access-Control-Allow-Origin": "*"},
           method:'POST',
           data:{
             tipo,
             descripcion,
-            estado
+            estado,
+            operativo
           }
         });
         if(data.status == 200){
@@ -43,7 +47,8 @@ export const useEquipoStore = defineStore('equipoStore', {
           this.equipoCurrent = {
             tipo:'',
             descripcion:'',
-            estado:''
+            estado:'',
+            operativo:''
           }
         }
         console.log(data);
@@ -58,6 +63,7 @@ export const useEquipoStore = defineStore('equipoStore', {
       try {
         const data = await Axios({
           url:API,
+          headers: {"Access-Control-Allow-Origin": "*"},
           method:'GET'
         })
         

@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="">
+    <form @submit.prevent="send">
       <h1>Agregar Equipo</h1>
       <div>
         <input type="text" placeholder="Tipo" required v-model="equipoCurrent.tipo">
@@ -9,6 +9,9 @@
       </div>
       <div>
         <input type="text" placeholder="Estado" required v-model="equipoCurrent.estado">
+      </div>
+      <div>
+        <input type="text" placeholder="Operativo" required v-model="equipoCurrent.operativo">
       </div>
       <div>
         <button type="submit">Guardar</button>
