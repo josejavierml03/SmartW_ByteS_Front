@@ -8,9 +8,10 @@
             <button @click="storeCounter.increaseCount">+</button>
         </div>
         <Form />
+        <Table />
 </template>
 
-<script setup>
+<script setup lang="ts">
 
 import { useCounterStore } from '@/stores/counter'
 import Form from '@/components/Form.vue';
