@@ -1,49 +1,52 @@
 import { defineStore } from 'pinia';
 import Axios from 'axios';
-const API = 'https://localhost:44347/api/Equipos';
+const API = 'https://localhost:44347/api/Misiones';
 
-interface IEquipo{
-  id?: number,
-  tipo: string,
+interface IMision{
+  codigo: string,
   descripcion: string,
-  estado: string
+  estado: string,
+  nombreOperativo: string
 }
 
 interface IState{
-  equipoCurrent: IEquipo,
-  equipos: IEquipo[]
+  misionCurrent: IMision,
+  misiones: IMision[]
 }
 
-export const useEquipoStore = defineStore('equipoStore', {
+export const useMisionStore = defineStore('misionStore', {
   state: ():IState=>{
     return{
-      equipoCurrent:{
-        tipo:'',
+      misionCurrent:{
+        codigo:'',
         descripcion:'',
-        estado:''
+        estado:'',
+        nombreOperativo: ''
       },
-      equipos: []
+      misiones: []
     }
   },
   actions:{
-    async addEquipo(equipo:IEquipo){
+    async addMision(mision:IMision){
       try {
-        const {tipo, descripcion, estado} = equipo;
+        const {codigo, descripcion, estado, nombreOperativo} = mision;
         const data = await Axios({
           url:API,
           method:'POST',
           data:{
-            tipo,
+            codigo,
             descripcion,
-            estado
+            estado,
+            nombreOperativo
           }
         });
         if(data.status == 201){
-          this.equipos.push(data.data);
-          this.equipoCurrent = {
-            tipo:'',
+          this.mision.push(data.data);
+          this.misionCurrent = {
+            codigo:'',
             descripcion:'',
-            estado:''
+            estado:'',
+            nombreOperativo:''
           }
         }
         console.log(data);
@@ -54,14 +57,14 @@ export const useEquipoStore = defineStore('equipoStore', {
       }
     },
 
-    async getAllEquipos(){
+    async getAllMisiones(){
       try {
         const data = await Axios({
           url:API,
           method:'GET'
         })
         
-        this.equipos = data.data;
+        this.misiones = data.data;
       } catch (error) {
         console.log(error);
         

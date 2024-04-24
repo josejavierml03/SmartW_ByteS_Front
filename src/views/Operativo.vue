@@ -1,19 +1,13 @@
 <template>
-    <h1>Operativo</h1>
-        <div class="count">
-            {{ storeCounter.count }}
-        </div>
-        <div class="buttons">
-            <button @click="storeCounter.decreaseCount" id="btR">-</button>
-            <button @click="storeCounter.increaseCount">+</button>
-        </div>
+    <h1>Operativos</h1>
+        <FormO />
+        <TableO />
 </template>
 
-<script setup>
+<script setup lang="ts">
 
-import { useCounterStore } from '@/stores/counter'
-
-const storeCounter = useCounterStore()
+import FormO from '@/components/FormO.vue'
+import TableO from '@/components/TableO.vue'
 
 </script>
 

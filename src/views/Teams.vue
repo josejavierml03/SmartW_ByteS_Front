@@ -1,22 +1,13 @@
 <template>
     <h1>Teams</h1>
-        <div class="count">
-            {{ storeCounter.count }}
-        </div>
-        <div class="buttons">
-            <button @click="storeCounter.decreaseCount" id="btR">-</button>
-            <button @click="storeCounter.increaseCount">+</button>
-        </div>
-        <Form />
-        <Table />
+        <FormE />
+        <TableE />
 </template>
 
 <script setup lang="ts">
 
-import { useCounterStore } from '@/stores/counter'
-import Form from '@/components/Form.vue';
-
-const storeCounter = useCounterStore()
+import FormE from '@/components/FormE.vue'
+import TableE from '@/components/TableE.vue'
 
 </script>
 

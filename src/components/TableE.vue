@@ -4,14 +4,12 @@
         <th>Tipo</th>
         <th>Descripcion</th>
         <th>Estado</th>
-        <th>Operativo</th>
       </thead>
       <tbody>
         <tr v-for="(item, index) in equipos" :key="index">
           <td>{{item.tipo}}</td>
           <td>{{item.descripcion}}</td>
           <td>{{item.estado}}</td>
-          <td>{{item.operativo}}</td>
         </tr>
       </tbody>
     </table>
@@ -61,6 +59,7 @@
   }
   td{
     padding:10px;
+    text-align: center;
   }
   .fila-par{
     background: #E7E9EB;

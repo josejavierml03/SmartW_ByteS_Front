@@ -1,19 +1,13 @@
 <template>
-    <h1>Mision</h1>
-        <div class="count">
-            {{ storeCounter.count }}
-        </div>
-        <div class="buttons">
-            <button @click="storeCounter.decreaseCount" id="btR">-</button>
-            <button @click="storeCounter.increaseCount">+</button>
-        </div>
+    <h1>Misiones</h1>
+        <FormM />
+        <TableM />
 </template>
 
-<script setup>
+<script setup lang="ts">
 
-import { useCounterStore } from '@/stores/counter'
-
-const storeCounter = useCounterStore()
+import FormM from '@/components/FormM.vue'
+import TableM from '@/components/TableM.vue'
 
 </script>
 
@@ -30,4 +24,3 @@ const storeCounter = useCounterStore()
     margin-right: 20px;
 }
 </style>
-
