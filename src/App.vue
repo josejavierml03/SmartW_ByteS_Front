@@ -17,7 +17,7 @@
 
         <v-list density="compact" nav>
           <v-list-item prepend-icon="mdi-home-outline" title="Home" value="home" to="/"></v-list-item>
-          <v-list-item prepend-icon="mdi-twitter" title="Team" value="team" to="/teams" ></v-list-item>
+          <v-list-item prepend-icon="mdi-account-group" title="Team" value="team" to="/teams" ></v-list-item>
           <v-list-item prepend-icon="mdi-checkbox-outline" title="Operativo" value="operativo" to="/operativo" ></v-list-item>
           <v-list-item prepend-icon="mdi-alpha-m-circle" title="Mision" value="mision" to="/mision" ></v-list-item>
         </v-list>
