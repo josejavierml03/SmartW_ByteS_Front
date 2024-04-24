@@ -1,13 +1,12 @@
 import { defineStore } from 'pinia';
 import Axios from 'axios';
-import { getEquipos } from '@/api/equipos';
 const API = 'https://localhost:44347/api/Equipos';
 
 interface IEquipo{
   id?: number,
   tipo: string,
   descripcion: string,
-  estado: "Disponible" | "Ocupado" | ''
+  estado: string
 }
 
 interface IState{
@@ -54,9 +53,13 @@ export const useEquipoStore = defineStore('equipoStore', {
     },
 
     async getAllEquipos(){
-      try {
-        const response = await getEquipos();
-        this.equipos = response.data;
+        try {
+          const data = await Axios({
+            url:API,
+            method:'GET'
+          })
+          
+          this.equipos = data.data;
       } catch (error) {
         console.log(error);
         
