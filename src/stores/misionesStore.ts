@@ -40,15 +40,13 @@ export const useMisionStore = defineStore('misionStore', {
             nombreOperativo
           }
         });
-        if(data.status == 201){
-          this.mision.push(data.data);
+          this.misiones.push(data.data);
           this.misionCurrent = {
             codigo:'',
             descripcion:'',
             estado:'',
             nombreOperativo:''
           }
-        }
         console.log(data);
         
       } catch (error) {

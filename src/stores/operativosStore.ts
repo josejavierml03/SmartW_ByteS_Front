@@ -34,13 +34,11 @@ export const useOperativoStore = defineStore('operativoStore', {
             rol
           }
         });
-        if(data.status == 201){
-          this.operativo.push(data.data);
+          this.operativos.push(data.data);
           this.operativoCurrent = {
             nombre:'',
             rol:''
           }
-        }
         console.log(data);
         
       } catch (error) {

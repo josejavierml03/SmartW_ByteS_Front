@@ -38,14 +38,12 @@ export const useEquipoStore = defineStore('equipoStore', {
             estado
           }
         });
-        if(data.status == 201){
           this.equipos.push(data.data);
           this.equipoCurrent = {
             tipo:'',
             descripcion:'',
             estado:''
           }
-        }
         console.log(data);
         
       } catch (error) {
